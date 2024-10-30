@@ -25,7 +25,7 @@ function anteriorSite() {
 }
 
 function iniciarTimer() {
-    timer = setInterval(proximoSite, 15000);
+    timer = setInterval(proximoSite, 25000);
 }
 
 function toggleTimer() {
