@@ -11,7 +11,7 @@ function mudarSite() {
     siteFrame.src = sites[indice];
 
     const siteNumber = document.getElementById('siteNumber');
-    siteNumber.textContent = `TMR ${indice + 1}`;
+    siteNumber.textContent = `TMR ${indice + 2}`;
 }
 
 function proximoSite() {
