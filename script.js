@@ -1,5 +1,4 @@
 const sites = [
-    "https://tmr.intelbras.com.br/monitoring",
     "https://tmr2.intelbras.com.br/monitoring",
     "https://tmr3.intelbras.com.br/monitoring"
 ];
