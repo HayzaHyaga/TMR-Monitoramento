@@ -1,14 +1,14 @@
-const sites = [
-    "https://tmr2.intelbras.com.br/monitoring",
-    "https://tmr3.intelbras.com.br/monitoring"
-];
-
+const sites = ["iframe1", "iframe2"];
 let indice = 0;
 let timer;
 
 function mudarSite() {
-    const siteFrame = document.getElementById('siteFrame');
-    siteFrame.src = sites[indice];
+    sites.forEach((siteId) => {
+        document.getElementById(siteId).classList.remove("active");
+    });
+
+    const siteAtual = document.getElementById(sites[indice]);
+    siteAtual.classList.add("active");
 
     const siteNumber = document.getElementById('siteNumber');
     siteNumber.textContent = `TMR ${indice + 2}`;
@@ -25,13 +25,19 @@ function anteriorSite() {
 }
 
 function iniciarTimer() {
-    timer = setInterval(proximoSite, 25000);
+    if (!timer) {
+        timer = setInterval(proximoSite, 25000);
+    }
+}
+
+function pararTimer() {
+    clearInterval(timer);
+    timer = null;
 }
 
 function toggleTimer() {
     if (timer) {
-        clearInterval(timer);
-        timer = null;
+        pararTimer();
     } else {
         iniciarTimer();
     }
