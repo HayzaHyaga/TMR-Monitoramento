@@ -8,21 +8,37 @@ body {
     overflow: hidden;
 }
 
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 iframe {
     width: 100%;
     height: 100%;
     border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+iframe.active {
+    display: block; 
 }
 
 .site-number {
     position: absolute;
     top: 20px;
-    right: 10%;
+    right: 20px;
     font-size: 2em;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
+    z-index: 10;
+    opacity: 1;
 }
 
 .controls {
@@ -43,6 +59,5 @@ iframe {
 }
 
 .controls button:hover {
-    background-color: #0056b3;
+    background-color: #009000;
 }
-
