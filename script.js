@@ -3,12 +3,14 @@ let indice = 0;
 let timer;
 
 function mudarSite() {
-    sites.forEach((siteId) => {
-        document.getElementById(siteId).classList.remove("active");
-    });
-
     const siteAtual = document.getElementById(sites[indice]);
-    siteAtual.classList.add("active");
+    
+    setTimeout(() => {
+        sites.forEach((siteId) => {
+            document.getElementById(siteId).classList.remove("active");
+        });
+        siteAtual.classList.add("active");
+    }, 10);
 
     const siteNumber = document.getElementById('siteNumber');
     siteNumber.textContent = `TMR ${indice + 2}`;
