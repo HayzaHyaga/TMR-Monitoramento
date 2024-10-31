@@ -21,11 +21,16 @@ iframe {
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
+    opacity: 0;
+    background-color: transparent;
+    transition: opacity 1s ease-in-out, visibility 0s linear 1s; /* Controle de visibilidade */
+    visibility: hidden;
 }
 
 iframe.active {
-    display: block; 
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s, 0s;
 }
 
 .site-number {
@@ -61,3 +66,4 @@ iframe.active {
 .controls button:hover {
     background-color: #009000;
 }
+
