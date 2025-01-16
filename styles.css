@@ -33,6 +33,19 @@ iframe.active {
     transition-delay: 0s, 0s;
 }
 
+.hello-world {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8em;
+    color: green;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 3px;
+    z-index: 10;
+    opacity: 1;
+}
+
 .site-number {
     position: absolute;
     top: 20px;
