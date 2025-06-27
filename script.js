@@ -1,4 +1,4 @@
-const sites = ["iframe1", "iframe2"];
+const sites = ["iframe1", "iframe2", "iframe3"];
 let indice = 0;
 let timer;
 
@@ -13,7 +13,7 @@ function mudarSite() {
     }, 10);
 
     const siteNumber = document.getElementById('siteNumber');
-    siteNumber.textContent = `TMR ${indice + 2}`;
+    siteNumber.textContent = `TMR ${indice + 1}`;
 }
 
 function proximoSite() {
